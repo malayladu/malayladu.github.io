@@ -1111,7 +1111,6 @@ video {
 
 .group:hover .download-btn {
   --tw-bg-opacity: 1;
-  background-color: rgba(124, 58, 237, var(--tw-bg-opacity));
 }
 
 .download-btn {

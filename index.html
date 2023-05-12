@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -118,12 +117,105 @@ educations: [{
     place: 'G.S.E.B',
     country: 'India',
     duration: 'Jun 2002 – Mar 2003'
+}],
+
+saasservices: [{
+    id: 'oms',
+    name: 'OptinMonster',
+    url: 'https://optinmonster.com',
+    logo: 'om.jpg',
+    summary: 'OptinMonster is the best popup builder and marketing platform that helps you get more email subscribers, increase sales, and grow your business. With the OptinMonster popup builder and conversion toolkit, you can turn abandoning website visitors into subscribers and customers.'
+},
+{
+    id: 'fss',
+    name: 'Freemius',
+    url: 'https://freemius.com',
+    logo: 'freemius.jpg',
+    summary: 'Freemius provides the easy to use platform to sell premium software, plugins, themes, templates & SaaS.'
+},
+{
+    id: 'putlers',
+    name: 'Putler',
+    url: 'https://putler.com',
+    logo: 'putler.png',
+    summary: 'Consolidate all your stores, payment gateways and Google Analytics in a single app. Powerful business analytics on sales, products, subscriptions, customers and visitors.'
+}],
+
+wpplugins: [{
+    id: 'es',
+    name: 'Icegram Express',
+    url: 'https://wordpress.org/plugins/email-subscribers/',
+    logo: 'es.png',
+    summary: 'Icegram Express – Email Subscribers, Newsletters and Marketing Automation Plugin. <br /><br /> Email subscribers and newsletter plugin, is the best email marketing tool for WordPress website owners. It is a cost-effective, fully-featured email marketing plugin with seamless integration with most popular themes, plugins and SMTP / email service providers.'
+},
+
+{
+    id: 'ig',
+    name: 'Icegram Engage',
+    url: 'https://wordpress.org/plugins/icegram/',
+    logo: 'ig.png',
+    summary: 'Icegram Engage – The Best WordPress Popup, Optin, CTA and Lead Generation Plugin <br /><br /> 🚀Boost lead generation and sales with the best WordPress popup plugin! 💯 <br /><br /> Maximize your website’s potential and drive more sales and email opt-ins with Icegram Engage – the best WordPress lead generation and optin popup plugin.'
+},
+
+
+{
+    id: 'tlwp',
+    name: 'Temporary Login Without Password',
+    url: 'https://wordpress.org/plugins/temporary-login-without-password/',
+    logo: 'tlwp.png',
+    summary: 'Create secure, self-expiring ⏱️, automatic login links 🔗 for WordPress. Give them to developers when they ask for admin access to your site. Or an editor for a quick review of work done. Login works just by opening the link, no password needed. <br /><br /> Using the “Temporary Login Without Password” plugin you can create a self-expiring account for someone and give them a special link with which they can login to your WordPress without needing a username and password.'
+}],
+
+
+wooplugins: [{
+    id: 'safww',
+    name: 'Affiliate For WooCommerce',
+    url: 'https://woocommerce.com/products/affiliate-for-woocommerce/',
+    logo: 'safww.png',
+    summary: 'Run your own successful affiliate program. Track referrals, sales and commissions; make payouts, create commission plans and marketing campaigns…all from one place. Includes self-care dashboard for affiliates. The easiest way to increase your brand value, get customers and grow revenue.'
+},
+{
+    id: 'safw',
+    name: 'Saved Addresses For WooCommerce',
+    url: 'https://woocommerce.com/products/saved-addresses-for-woocommerce/',
+    logo: 'safww.png',
+    summary: 'Enable users to save and quickly select from multiple addresses - shipping and billing during checkout and place the order. Manage all addresses from my account.'
+},
+{
+    id: 'sflw',
+    name: 'Save For Later For WooCommerce',
+    url: 'https://www.storeapps.org/product/save-for-later-for-woocommerce/',
+    summary: 'Boost sales by reminding visitors about their desired products <br /><br /> WooCommerce Save for Later plugin allows both guests and logged-in users to save items in their cart, persuading them to make an instant purchase.'
+},
+{
+    id: 'wcfw',
+    name: 'Express Checkout For WooCommerce',
+    url: 'https://www.storeapps.org/product/express-checkout-for-woocommerce',
+    summary: 'Enable quick checkout for virtual and downloadable products.'
+},
+{
+    id: 'fbtfw',
+    name: 'Frequently Bought Together For WooCommerce',
+    url: 'https://www.storeapps.org/product/frequently-bought-together-woocommerce',
+    summary: 'Use WooCommerce Frequently Bought Together plugin to automatically show users related products / product recommendations to the product they are already viewing, nudging them to buy together those products.'
+}],
+
+otherservices: [{
+    id: 'wpmeta',
+    name: 'WPMeta',
+    url: 'https://wpmeta.org',
+    logo: 'wpmeta.png',
+    summary: 'A New Way to Discover WordPress Plugins. <br /><br /> Quickly review a plugin with our unique single page summary. Find best plugins for your need, compare them, look for alternatives or research a plugin easily. WPMeta Plugin Search is your friend.'
+},
+{
+    id: 'am',
+    name: 'activeCollab Extenstions',
+    url: 'https://appsmagnet.com',
+    logo: 'apps-magnet.png',
+    summary: 'Making activeCollab more productive and enjoyable for people everyday.'
 }]
 
-
-
 }">
-
     <main class="main-container">
         <div class="grid gap-5 lg:grid-cols-7">
 
@@ -366,362 +458,115 @@ educations: [{
                 <div class="p-7 block-section"  x-show="tab === 'portfolio'"><!-- Start Education Block -->
                     <h2 class="block-title">Software as a Service (SaaS)</h2>
 
-                    <div class="mb-5 item-section">
-                        <div class="company-logo" style="">
-                            <a href="https://optinmonster.com" target="_blank">
-                                <img src="assets/img/om.jpg" />
-                            </a>
-                        </div>
+                    <template x-for="s in saasservices" :key="s.id">
+                        <div class="mb-5 item-section">
+                            <div class="company-logo" style="">
+                                <a :href="s.url" target="_blank" x-show="s.logo">
+                                    <img :src="'assets/img/' + s.logo" />
+                                </a>
+                            </div>
 
-                        <div class="w-full space-y-5">
-                            <div class="item-header items-end">
-                                <div class="space-y-1.5">
-                                    <div class="font-medium">
-                                        <a href="https://optinmonster.com" target="_blank">OptinMonster</a></div>
-                                    <div class="flex space-x-5">
-                                        <div class="text-gray-600 text-sm">
-                                            <span>OptinMonster is the best popup builder and marketing platform that helps you get more email subscribers, increase sales, and grow your business.
-                                                With the OptinMonster popup builder and conversion toolkit, you can turn abandoning website visitors into subscribers and customers.</span>
+                            <div class="w-full space-y-5">
+                                <div class="item-header">
+                                    <div class="space-y-1.5">
+                                        <div class="font-medium">
+                                            <a :href="s.url" target="_blank" x-text="s.name"></a>
+                                        </div>
+                                        <div class="flex space-x-5">
+                                            <div class="text-gray-600 text-sm">
+                                                <span x-html="s.summary"></span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="border-b border-gray-200"></div>
-                        </div>
-                    </div>
-
-                    <div class="mb-5 item-section">
-                        <div class="company-logo" style="background-color: #1DA1F2;">
-                            <a href="https://freemius.com" target="_blank">
-                                <img src="assets/img/freemius.jpg" />
-                            </a>
-                        </div>
-
-                        <div class="w-full space-y-5">
-                            <div class="item-header items-end">
-                                <div class="space-y-1.5">
-                                    <div class="font-medium">
-                                        <a href="https://freemius.com" target="_blank">Freemius</a>
-                                    </div>
-                                    <div class="flex space-x-5">
-                                        <div class="text-gray-600 text-sm">
-                                            <span>Freemius provides the easy to use platform to sell premium software, plugins, themes, templates & SaaS.</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="border-b border-gray-200"></div>
-                        </div>
-                    </div>
-
-
-                    <div class="mb-10 item-section">
-                        <div class="company-logo" style="background-color: #1DA1F2;">
-                            <a href="https://putler.com" target="_blank">
-                                <img src="assets/img/putler.png" />
-                            </a>
-                        </div>
-
-                        <div class="w-full space-y-5">
-                            <div class="item-header items-end">
-                                <div class="space-y-1.5">
-                                    <div class="font-medium">
-                                        <a href="https://putler.com" target="_blank">Putler</a>
-                                    </div>
-                                    <div class="flex space-x-5">
-                                        <div class="text-gray-600 text-sm">
-                                            <span>Consolidate all your stores, payment gateways and Google Analytics in a single app. Powerful business analytics on sales, products, subscriptions, customers and visitors.</span>
-                                        </div>
-                                    </div>
-                                </div>
+                                <div class="border-b border-gray-200"></div>
                             </div>
                         </div>
-                    </div>
+                    </template>
 
                     <h2 class="block-title">WordPress Plugins</h2>
 
-                    <div class="mb-5 item-section">
-                        <div class="company-logo" style="">
-                            <a href="https://wordpress.org/plugins/email-subscribers/" target="_blank">
-                                <img src="assets/img/es.png" />
-                            </a>
-                        </div>
+                    <template x-for="wp in wpplugins" :key="wp.id">
+                        <div class="mb-5 item-section">
+                            <div class="company-logo" style="">
+                                <a :href="wp.url" target="_blank">
+                                    <img :src="'assets/img/' + wp.logo" />
+                                </a>
+                            </div>
 
-                        <div class="w-full space-y-5">
-                            <div class="item-header items-end">
-                                <div class="space-y-1.5">
-                                    <div class="font-medium">
-                                        <a href="https://wordpress.org/plugins/email-subscribers/" target="_blank">Icegram Express</a>
-                                    </div>
-                                    <div class="flex space-x-5">
-                                        <div class="text-gray-600 text-sm">
-                                            <span>
-                                                Icegram Express – Email Subscribers, Newsletters and Marketing Automation Plugin.
-
-                                                <br /><br />
-
-                                                Email subscribers and newsletter plugin, is the best email marketing tool for WordPress website owners. It is a cost-effective, fully-featured email marketing plugin with seamless integration with most popular themes, plugins and SMTP / email service providers.
-                                            </span>
+                            <div class="w-full space-y-5">
+                                <div class="item-header items-end">
+                                    <div class="space-y-1.5">
+                                        <div class="font-medium">
+                                            <a :href="wp.url" target="_blank" x-text="wp.name"></a>
+                                        </div>
+                                        <div class="flex space-x-5">
+                                            <div class="text-gray-600 text-sm">
+                                            <span x-html="wp.summary"></span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="border-b border-gray-200"></div>
                             </div>
-                            <div class="border-b border-gray-200"></div>
                         </div>
-                    </div>
-
-
-                    <div class="mb-5 item-section">
-                        <div class="company-logo" style="">
-                            <a href="https://wordpress.org/plugins/icegram/" target="_blank">
-                                <img src="assets/img/ig.png" />
-                            </a>
-                        </div>
-
-                        <div class="w-full space-y-5">
-                            <div class="item-header items-end">
-                                <div class="space-y-1.5">
-                                    <div class="font-medium">
-                                        <a href="https://wordpress.org/plugins/icegram/" target="_blank">Icegram Engage</a>
-                                    </div>
-                                    <div class="flex space-x-5">
-                                        <div class="text-gray-600 text-sm">
-                                            <span>
-                                                Icegram Engage – The Best WordPress Popup, Optin, CTA and Lead Generation Plugin
-
-
-                                                <br /><br />
-
-                                                🚀Boost lead generation and sales with the best WordPress popup plugin! 💯
-
-                                                <br /><br />
-                                                Maximize your website’s potential and drive more sales and email opt-ins with Icegram Engage – the best WordPress lead generation and optin popup plugin.
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="border-b border-gray-200"></div>
-                        </div>
-                    </div>
-
-                    <div class="mb-5 item-section">
-                        <div class="company-logo" style="">
-                            <a href="https://wordpress.org/plugins/temporary-login-without-password/" target="_blank">
-                                <img src="assets/img/tlwp.png" />
-                            </a>
-                        </div>
-
-                        <div class="w-full space-y-5">
-                            <div class="item-header items-end">
-                                <div class="space-y-1.5">
-                                    <div class="font-medium">
-                                        <a href="https://wordpress.org/plugins/temporary-login-without-password/" target="_blank">Temporary Login Without Password</a>
-                                    </div>
-                                    <div class="flex space-x-5">
-                                        <div class="text-gray-600 text-sm">
-                                            <span>
-                                                Create secure, self-expiring ⏱️, automatic login links 🔗 for WordPress. Give them to developers when they ask for admin access to your site. Or an editor for a quick review of work done. Login works just by opening the link, no password needed.
-
-                                                <br /><br />
-                                                Using the “Temporary Login Without Password” plugin you can create a self-expiring account for someone and give them a special link with which they can login to your WordPress without needing a username and password.
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="border-b border-gray-200"></div>
-                        </div>
-                    </div>
+                    </template>
 
                     <h2 class="block-title">WooCommerce Plugins</h2>
 
-                    <div class="mb-5 item-section">
-                        <div class="company-logo" style="">
-                            <a href="https://woocommerce.com/products/affiliate-for-woocommerce/" target="_blank">
-                                <img src="assets/img/safww.png" />
-                            </a>
-                        </div>
+                    <template x-for="wp in wooplugins" :key="wp.id">
+                        <div class="mb-5 item-section">
+                            <div class="company-logo" style="">
+                                <a :href="wp.url" target="_blank" x-show="wp.logo" >
+                                    <img :src="'assets/img/' + wp.logo"  />
+                                </a>
+                            </div>
 
-                        <div class="w-full space-y-5">
-                            <div class="item-header items-end">
-                                <div class="space-y-1.5">
-                                    <div class="font-medium">
-                                        <a href="https://woocommerce.com/products/affiliate-for-woocommerce/" target="_blank">Affiliate For WooCommerce</a>
-                                    </div>
-                                    <div class="flex space-x-5">
-                                        <div class="text-gray-600 text-sm">
-                                            <span>
-                                               Run your own successful affiliate program. Track referrals, sales and commissions; make payouts, create commission plans and marketing campaigns…all from one place. Includes self-care dashboard for affiliates. The easiest way to increase your brand value, get customers and grow revenue.
-                                            </span>
+                            <div class="w-full space-y-5">
+                                <div class="item-header items-end">
+                                    <div class="space-y-1.5">
+                                        <div class="font-medium">
+                                            <a :href="wp.url" target="_blank" x-text="wp.name"></a>
+                                        </div>
+                                        <div class="flex space-x-5">
+                                            <div class="text-gray-600 text-sm">
+                                                <span x-html="wp.summary"></span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="border-b border-gray-200"></div>
                             </div>
-                            <div class="border-b border-gray-200"></div>
                         </div>
-                    </div>
-
-                    <div class="mb-5 item-section">
-                        <div class="company-logo" style="">
-                            <a href="https://woocommerce.com/products/saved-addresses-for-woocommerce/" target="_blank">
-                                <img src="assets/img/safw.png" />
-                            </a>
-                        </div>
-
-                        <div class="w-full space-y-5">
-                            <div class="item-header items-end">
-                                <div class="space-y-1.5">
-                                    <div class="font-medium">
-                                        <a href="https://woocommerce.com/products/saved-addresses-for-woocommerce/" target="_blank">Saved Addresses For WooCommerce</a>
-                                    </div>
-                                    <div class="flex space-x-5">
-                                        <div class="text-gray-600 text-sm">
-                                            <span>
-                                                Enable users to save and quickly select from multiple addresses - shipping and billing during checkout and place the order. Manage all addresses from my account.
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="border-b border-gray-200"></div>
-                        </div>
-                    </div>
-
-                    <div class="mb-5 item-section">
-                        <div class="company-logo" style="">
-                            <a href="https://www.storeapps.org/product/save-for-later-for-woocommerce/" target="_blank">
-                            </a>
-                        </div>
-
-                        <div class="w-full space-y-5">
-                            <div class="item-header items-end">
-                                <div class="space-y-1.5">
-                                    <div class="font-medium">
-                                        <a href="https://www.storeapps.org/product/save-for-later-for-woocommerce/" target="_blank">Save For Later For WooCommerce</a>
-                                    </div>
-                                    <div class="flex space-x-5">
-                                        <div class="text-gray-600 text-sm">
-                                            <span>
-                                                Boost sales by reminding visitors about their desired products
-                                                <br /><br />
-                                                WooCommerce Save for Later plugin allows both guests and logged-in users to save items in their cart, persuading them to make an instant purchase.
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="border-b border-gray-200"></div>
-                        </div>
-                    </div>
-
-                    <div class="mb-5 item-section">
-                        <div class="company-logo" style="">
-                            <a href="https://www.storeapps.org/product/express-checkout-for-woocommerce/" target="_blank">
-                            </a>
-                        </div>
-
-                        <div class="w-full space-y-5">
-                            <div class="item-header items-end">
-                                <div class="space-y-1.5">
-                                    <div class="font-medium">
-                                        <a href="https://www.storeapps.org/product/express-checkout-for-woocommerce/" target="_blank">Express Checkout For WooCommerce</a>
-                                    </div>
-                                    <div class="flex space-x-5">
-                                        <div class="text-gray-600 text-sm">
-                                            <span>
-                                                Enable quick checkout for virtual and downloadable products.
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="border-b border-gray-200"></div>
-                        </div>
-                    </div>
-
-                    <div class="mb-5 item-section">
-                        <div class="company-logo" style="">
-                            <a href="https://www.storeapps.org/product/frequently-bought-together-woocommerce/" target="_blank">
-                            </a>
-                        </div>
-
-                        <div class="w-full space-y-5">
-                            <div class="item-header items-end">
-                                <div class="space-y-1.5">
-                                    <div class="font-medium">
-                                        <a href="https://www.storeapps.org/product/frequently-bought-together-woocommerce/" target="_blank">Frequently Bought Together For WooCommerce</a>
-                                    </div>
-                                    <div class="flex space-x-5">
-                                        <div class="text-gray-600 text-sm">
-                                            <span>
-                                                Use WooCommerce Frequently Bought Together plugin to automatically show users related products / product recommendations to the product they are already viewing, nudging them to buy together those products.
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="border-b border-gray-200"></div>
-                        </div>
-                    </div>
+                    </template>
 
                     <h2 class="block-title">Other Services</h2>
 
-                    <div class="mb-5 item-section">
-                        <div class="company-logo" style="">
-                            <a href="https://wpmeta.org" target="_blank">
-                                <img src="assets/img/wpmeta.png" />
-                            </a>
-                        </div>
+                    <template x-for="s in otherservices" :key="s.id">
+                        <div class="mb-5 item-section">
+                            <div class="company-logo" style="">
+                                <a :href="s.url" target="_blank" x-show="s.logo">
+                                    <img :src="'assets/img/' + s.logo" />
+                                </a>
+                            </div>
 
-                        <div class="w-full space-y-5">
-                            <div class="item-header items-end">
-                                <div class="space-y-1.5">
-                                    <div class="font-medium">
-                                        <a href="https://wpmeta.org" target="_blank">WPMeta</a>
-                                    </div>
-                                    <div class="flex space-x-5">
-                                        <div class="text-gray-600 text-sm">
-                                            <span>
-                                                A New Way to Discover WordPress Plugins.
-
-                                                <br /><br />
-                                                Quickly review a plugin with our unique single page summary. Find best plugins for your need, compare them, look for alternatives or research a plugin easily. WPMeta Plugin Search is your friend.
-                                            </span>
+                            <div class="w-full space-y-5">
+                                <div class="item-header">
+                                    <div class="space-y-1.5">
+                                        <div class="font-medium">
+                                            <a :href="s.url" target="_blank" x-text="s.name"></a>
+                                        </div>
+                                        <div class="flex space-x-5">
+                                            <div class="text-gray-600 text-sm">
+                                                <span x-html="s.summary"></span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="border-b border-gray-200"></div>
                             </div>
-                            <div class="border-b border-gray-200"></div>
                         </div>
-                    </div>
-
-
-                    <div class="mb-5 item-section">
-                        <div class="company-logo" style="">
-                            <a href="https://appsmagnet.com" target="_blank">
-                                <img src="assets/img/apps-magnet.png" />
-                            </a>
-                        </div>
-
-                        <div class="w-full space-y-5">
-                            <div class="item-header items-end">
-                                <div class="space-y-1.5">
-                                    <div class="font-medium">
-                                        <a href="https://appsmagnet.com" target="_blank">activeCollab Extenstions</a></div>
-                                    <div class="flex space-x-5">
-                                        <div class="text-gray-600 text-sm">
-                                            <span>
-                                                Making activeCollab more productive and enjoyable for people everyday.
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="border-b border-gray-200"></div>
-                        </div>
-                    </div>
-
+                    </template>
                 </div><!-- Start Products Block -->
             </div><!-- End Right Side -->
         </div>

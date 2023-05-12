@@ -489,8 +489,8 @@ otherservices: [{
                     <template x-for="wp in wpplugins" :key="wp.id">
                         <div class="mb-5 item-section">
                             <div class="company-logo" style="">
-                                <a :href="wp.url" target="_blank">
-                                    <img :src="'assets/img/' + wp.logo" />
+                                <a :href="wp.url" target="_blank" x-data="{src : wp.logo ? wp.logo : 'product.png'}">
+                                    <img :src="'assets/img/' + src" />
                                 </a>
                             </div>
 
@@ -517,8 +517,8 @@ otherservices: [{
                     <template x-for="wp in wooplugins" :key="wp.id">
                         <div class="mb-5 item-section">
                             <div class="company-logo" style="">
-                                <a :href="wp.url" target="_blank" x-show="wp.logo" >
-                                    <img :src="'assets/img/' + wp.logo"  />
+                                <a :href="wp.url" target="_blank" x-data="{src : wp.logo ? wp.logo : 'product.png'}">
+                                    <img :src="'assets/img/' + src"  />
                                 </a>
                             </div>
 
@@ -545,8 +545,8 @@ otherservices: [{
                     <template x-for="s in otherservices" :key="s.id">
                         <div class="mb-5 item-section">
                             <div class="company-logo" style="">
-                                <a :href="s.url" target="_blank" x-show="s.logo">
-                                    <img :src="'assets/img/' + s.logo" />
+                                <a :href="s.url" target="_blank" x-data="{src : s.logo ? s.logo : 'product.png'}">
+                                    <img :src="'assets/img/' + src" />
                                 </a>
                             </div>
 

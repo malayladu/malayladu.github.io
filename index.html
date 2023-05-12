@@ -18,7 +18,7 @@
 <body class="bg-gray-100 antialiased" x-data="{
 tab: 'about',
 coreValues: [ 'Integrity', 'Simplicity', 'Accountability', 'Transparency', 'Create values for customers' ],
-skills: [ 'PHP', 'WordPress', 'Laravel', 'JavaScript', 'React', 'NodeJS', 'Vue', 'SQL', 'HTML', 'Grunt', 'AlpineJS'],
+skills: [ 'PHP', 'WordPress', 'Laravel', 'JavaScript', 'React', 'NodeJS', 'Vue', 'SQL', 'HTML', 'Grunt', 'AlpineJS', 'Tailwind CSS'],
 profiles: [{
         id: 'envelope',
         type: 'envelope',
@@ -55,7 +55,73 @@ profiles: [{
         class: 'bx bxl-wordpress text-2xl',
         url: 'https://profiles.wordpress.org/malayladu/'
     },
-]}">
+],
+companies: [{
+    id: 'am',
+    name: 'Awesome Motive Inc.',
+    title: 'Product Developer @OptinMonster',
+    location: 'United States · Remote',
+    duration: 'Nov 2022 – Present',
+    logo: 'am.jpg',
+    summary: '<ul class=\'list-disc list-inside\'> <li>Develop OptinMonster SaaS backend.</li> <li>Code Reviews.</li> <li>Participate in team meetings.</li> <li>Triage bugs.</li> <li>Write technical document.</li> <li>Customer Support.</li> </ul>'
+},
+{
+    id: 'fs',
+    title: 'Full Stack Engineer',
+    name: 'Freemius Inc.',
+    location: 'Israel · Remote',
+    duration: 'Oct 2021 – Nov 2022',
+    logo: 'freemius.jpg',
+    summary: '<ul class=\'list-disc list-inside\'> <li>Build Freemius SaaS platform.</li> <li>Manage Freemius WordPress SDK.</li> <li>Code Reviews.</li> <li>Participate in team meetings.</li> <li>Triage bugs.</li> <li>Write technical document.</li> <li>Customer Support.</li> </ul>'
+},
+{
+    id: 'sa',
+    title: 'Team Leader',
+    name: 'StoreApps Technologies LLP',
+    location: 'Mumbai, India',
+    duration: 'Jul 2014 – Sep 2021',
+    logo: 'sa.jpg',
+    summary: '<ul class=\'list-disc list-inside\'> <li>Manage product development life cycle.</li> <li>Lead meetings.</li> <li>Manage team of 10 people.<br></li> <li>Pair programming with teammates to solve problems.<br></li> <li>Code Review.<br></li> <li>Organize Hackathon to build products in 2 days from scratch.<br></li> <li>Development of WordPress &amp; WooCommerce plugins.</li> </ul>'
+},
+
+{
+    id: 'appsmagnet',
+    title: 'Lead Developer',
+    name: 'Apps Magnet',
+    location: 'Mumbai, India',
+    duration: 'Aug 2009 – Jun 2014',
+    logo: 'apps-magnet.png',
+    summary: '<ul class=\'list-disc list-inside\'> <li>Key responsibility is to generate product ideas, prepare a product plan, development of product and provide top notch support to our customers.</li> <li>Development of activeCollab extensions.<br></li> <li>Communicate with customers to understand their need and provide them an effective custom solution if require (done 50+ activeCollab customization projects) <br></li> </ul>'
+}],
+
+educations: [{
+    id: 'btech',
+    degree: 'Bachelor Of Technology',
+    place: 'Ganpat University'
+    country: 'India',
+    duration: 'June 2005 – June 2009'
+},
+{
+    id: 'hsc',
+    degree: 'H.S.C',
+    place: 'G.S.H.E.B'
+    country: 'India',
+    duration: 'Jun 2003 – Mar 2005'
+},
+{
+    id: 'ssc',
+    degree: 'S.S.C',
+    place: 'G.S.E.B'
+    country: 'India',
+    duration: 'Jun 2002 – Mar 2003'
+}
+
+],
+
+
+
+}">
+
     <main class="main-container">
         <div class="grid gap-5 lg:grid-cols-7">
 
@@ -67,7 +133,7 @@ profiles: [{
                         <span class="status-badge bg-green-600">Available</span>
                         <a href="/personal_cv/"><img src="assets/img/avatar.jpg" alt="Avatar" class="user-photo"></a>
                         <div class="text-lg font-bold mb-1.5">Malay Ladu</div>
-                        <div class="text-sm mb-7">Senior WordPress Developer</div>
+                        <div class="text-sm mb-7">Product Developer @OptinMonster, Problem Solver, WordPress Enthusiast, Open Source Lover.</div>
                         <div class="flex group">
                             <button class="download-btn"><a href="assets/cv/Malay-Ladu-CV.pdf" download="Malay-Ladu-CV">Download CV</a></button>
                             <button class="download-btn-icon"><a href="assets/cv/Malay-Ladu-CV.pdf" download="Malay-Ladu-CV"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg></a></button>
@@ -130,7 +196,7 @@ profiles: [{
                             <a href="#" class="menu-link menu-link-hover" @click="tab = 'about'" :class="{'menu-link-active': tab === 'about'}">About</a>
                         </li>
                         <li>
-                            <a href="#" class="menu-link menu-link-hover" @click="tab = 'experience'" :class="{'menu-link-active': tab === 'resume'}">Experience</a>
+                            <a href="#" class="menu-link menu-link-hover" @click="tab = 'experience'" :class="{'menu-link-active': tab === 'experience'}">Experience</a>
                         </li>
                         <li>
                             <a href="#" class="menu-link menu-link-hover" @click="tab = 'portfolio'" :class="{'menu-link-active' : tab === 'portfolio'}" >Portfolio</a>
@@ -140,6 +206,8 @@ profiles: [{
                 </div>
 
                 <div class="p-7 pb-0 block-section"  x-show="tab === 'about'">
+
+                    <h2 class="block-title">About Me</h2>
 
                     <p class="text-gray-600 mb-5">
                         I have 13+ years of experience in building software that helps to solve real problems for real people.
@@ -157,7 +225,7 @@ profiles: [{
                         Apart from all this, I am a responsible son, caring husband, and father of two loving daughters.
 
                         <br /><br />
-                        When I am glued on a computer screen, I spend time with family, on cricket ground or on badminton court, and trying hard not to be the worst dancer!
+                        When I'm not glued on a computer screen, I spend time with family, on cricket ground or on badminton court, and trying hard not to be the worst dancer!
                     </p>
 
 
@@ -200,320 +268,93 @@ profiles: [{
                 <!-- End - Profiles -->
 
                 <div class="p-7 block-section" x-show="tab === 'experience'"><!-- Start Experience Block -->
-                    <div class="mb-5 item-section">
-                        <div class="company-logo" style="background-color: #1DA1F2;">
-                            <img src="assets/img/am.jpg" />
-                        </div>
-
-                        <div class="w-full space-y-5">
-                            <div class="item-header">
-                                <div class="space-y-1.5">
-                                    <div class="font-medium">Product Developer @OptinMonster</div>
-                                    <div class="flex space-x-5">
-                                        <div class="item-header-info">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                            </svg>
-                                            <span>Awesome Motive Inc.</span>
-                                        </div>
-                                        <div class="item-header-info">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                            </svg>
-                                            <span>United States · Remote</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="space-y-2 sm:text-right">
-                                    <div class="job-item-badge">Full time</div>
-                                    <div class="item-header-info">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                        </svg>
-                                        <span>Nov 2022 – Present</span>
-                                    </div>
-                                </div>
+                    <h2 class="block-title">Companies</h2>
+                    <template x-for="company in companies" :key="company.id">
+                        <div class="mb-5 item-section">
+                            <div class="company-logo">
+                                <img :src="'assets/img/' + company.logo" />
                             </div>
-                            <p class="text-gray-600">
-                                <ul class="list-disc list-inside">
-                                    <li>Develop OptinMonster SaaS backend.</li>
-                                    <li>Code Reviews.</li>
-                                    <li>Participate in team meetings.</li>
-                                    <li>Triage bugs.</li>
-                                    <li>Write technical document.</li>
-                                    <li>Customer Support.</li>
-                                </ul>
-                            </p>
-                            <div class="border-b border-gray-200"></div>
-                        </div>
-                    </div>
 
-                    <div class="mb-5 item-section">
-                        <div class="company-logo" style="background-color: #0061FF;">
-                            <img src="assets/img/freemius.jpg" />
-                        </div>
-
-                        <div class="w-full space-y-5">
-                            <div class="item-header">
-                                <div class="space-y-1.5">
-                                    <div class="font-medium">Full Stack Engineer</div>
-                                    <div class="flex space-x-5">
-                                        <div class="item-header-info">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                            </svg>
-                                            <span>Freemius Inc.</span>
+                            <div class="w-full space-y-5">
+                                <div class="item-header">
+                                    <div class="space-y-1.5">
+                                        <div class="font-medium" x-text="company.title"></div>
+                                        <div class="flex space-x-5">
+                                            <div class="item-header-info">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                                </svg>
+                                                <span x-text="company.name"></span>
+                                            </div>
+                                            <div class="item-header-info">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                                </svg>
+                                                <span x-text="company.location"></span>
+                                            </div>
                                         </div>
+                                    </div>
+                                    <div class="space-y-2 sm:text-right">
+                                        <div class="job-item-badge">Full time</div>
                                         <div class="item-header-info">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                             </svg>
-                                            <span>Israel · Remote</span>
+                                            <span x-text="company.duration"></span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="space-y-2 sm:text-right">
-                                    <div class="job-item-badge">Full time</div>
-                                    <div class="item-header-info">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                        </svg>
-                                        <span>Oct 2021 – Nov 2022</span>
-                                    </div>
-                                </div>
+                                <p class="text-gray-600" x-html="company.summary"></p>
+                                <div class="border-b border-gray-200"></div>
                             </div>
-                            <p class="text-gray-600">
-                                <ul class="list-disc list-inside">
-                                    <li>Build Freemius SaaS platform.</li>
-                                    <li>Manage Freemius WordPress SDK.</li>
-                                    <li>Code Reviews.</li>
-                                    <li>Participate in team meetings.</li>
-                                    <li>Triage bugs.</li>
-                                    <li>Write technical document.</li>
-                                    <li>Customer Support.</li>
-                                </ul>
-                            </p>
-                            <div class="border-b border-gray-200"></div>
                         </div>
-                    </div>
-
-                    <div class="mb-5 item-section">
-                        <div class="company-logo">
-                            <img src="assets/img/sa.jpg" />
-                        </div>
-
-                        <div class="w-full space-y-5">
-                            <div class="item-header">
-                                <div class="space-y-1.5">
-                                    <div class="font-medium">Team Leader</div>
-                                    <div class="flex space-x-5">
-                                        <div class="item-header-info">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                            </svg>
-                                            <span>StoreApps Technologies</span>
-                                        </div>
-                                        <div class="item-header-info">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                            </svg>
-                                            <span>Mumbai, India</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="space-y-2 sm:text-right">
-                                    <div class="job-item-badge">Full time</div>
-                                    <div class="item-header-info">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                        </svg>
-                                        <span>Jul 2014 – Sep 2021</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="text-gray-600">
-                                <ul class="list-disc list-inside">
-                                    <li>Manage product development life cycle.</li>
-                                    <li>Lead meetings.</li>
-                                    <li>Manage team of 10 people.<br></li>
-                                    <li>Pair programming with teammates to solve problems.<br></li>
-                                    <li>Code Review.<br></li>
-                                    <li>Organize Hackathon to build products in 2 days from scratch.<br></li>
-                                    <li>Development of WordPress &amp; WooCommerce plugins.</li>
-                                </ul>
-                            </p>
-
-                            <div class="border-b border-gray-200"></div>
-                        </div>
-
-                    </div>
-
-                    <div class="item-section">
-                        <div class="company-logo">
-                            <img src="assets/img/apps-magnet.png" />
-                        </div>
-
-                        <div class="w-full space-y-5">
-                            <div class="item-header">
-                                <div class="space-y-1.5">
-                                    <div class="font-medium">Lead Developer</div>
-                                    <div class="flex space-x-5">
-                                        <div class="item-header-info">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                            </svg>
-                                            <span>Apps Magnet</span>
-                                        </div>
-                                        <div class="item-header-info">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                            </svg>
-                                            <span>Mumbai, India</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="space-y-2 sm:text-right">
-                                    <div class="job-item-badge">Full time</div>
-                                    <div class="item-header-info">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                        </svg>
-                                        <span>Jul 2014 – Sep 2021</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="text-gray-600">
-                                <ul class="list-disc list-inside">
-                                    <li>Key responsibility is to generate product ideas, prepare a product plan, development of product and provide top notch support to our customers.</li>
-                                    <li>Development of activeCollab extensions.<br></li>
-                                    <li>Communicate with customers to understand their need and provide them an effective custom solution if require (done 50+ activeCollab customization projects) <br></li>
-                                </ul>
-                            </p>
-                        </div>
-                    </div>
+                    </template>
                 </div><!-- Start Experience Block -->
 
                 <div class="p-7 block-section"  x-show="tab === 'experience'"><!-- Start Education Block -->
                     <h2 class="block-title">Education</h2>
-                    <div class="mb-5 item-section">
-                        <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-cover" style="background-image: url('assets/img/bu-logo.jpg');">
-                        </div>
 
-                        <div class="w-full space-y-5">
-                            <div class="item-header items-end">
-                                <div class="space-y-1.5">
-                                    <div class="font-medium">Bachelor in Information Technology</div>
-                                    <div class="flex space-x-5">
-                                        <div class="item-header-info">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path d="M12 14l9-5-9-5-9 5 9 5z" />
-                                            <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
-                                            </svg>
-                                            <span>Ganpat University</span>
-                                        </div>
-                                        <div class="item-header-info">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                            </svg>
-                                            <span>India</span>
-                                        </div>
-                                    </div>
+                        <template x-for="degree in educations" :key="degree.id">
+                            <div class="mb-5 item-section">
+                                <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-cover" style="background-image: url('assets/img/bu-logo.jpg');">
                                 </div>
-                                <div class="space-y-1.5 sm:text-right">
-                                    <div class="item-header-info">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                        </svg>
-                                        <span>June 2005 – June 2009</span>
+
+                                <div class="w-full space-y-5">
+                                    <div class="item-header items-end">
+                                        <div class="space-y-1.5">
+                                            <div class="font-medium" x-text="degree.degree"></div>
+                                            <div class="flex space-x-5">
+                                                <div class="item-header-info">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                                                        <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+                                                    </svg>
+                                                    <span x-text="degree.place"></span>
+                                                </div>
+                                                <div class="item-header-info">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                                    </svg>
+                                                    <span x-text="degree.country"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="space-y-1.5 sm:text-right">
+                                            <div class="item-header-info">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                                </svg>
+                                                <span x-text="degree.duration"></span>
+                                            </div>
+                                        </div>
                                     </div>
+                                    <div class="border-b border-gray-200"></div>
                                 </div>
                             </div>
-                            <div class="border-b border-gray-200"></div>
-                        </div>
-                    </div>
-
-                    <div class="mb-5 item-section">
-                        <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-cover" style="background-image: url('assets/img/bu-logo.jpg');">
-                        </div>
-
-                        <div class="w-full space-y-5">
-                            <div class="item-header items-end">
-                                <div class="space-y-1.5">
-                                    <div class="font-medium">H.S.C</div>
-                                    <div class="flex space-x-5">
-                                        <div class="item-header-info">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path d="M12 14l9-5-9-5-9 5 9 5z" />
-                                            <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
-                                            </svg>
-                                            <span>G.S.H.E.B</span>
-                                        </div>
-                                        <div class="item-header-info">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                            </svg>
-                                            <span>India</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="space-y-1.5 sm:text-right">
-                                    <div class="item-header-info">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                        </svg>
-                                        <span>Jun 2003 – Mar 2005</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="border-b border-gray-200"></div>
-                        </div>
-                    </div>
-
-                    <div class="item-section">
-                        <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-cover" style="background-image: url('assets/img/bu-logo.jpg');">
-                        </div>
-
-                        <div class="w-full space-y-5">
-                            <div class="item-header items-end">
-                                <div class="space-y-1.5">
-                                    <div class="font-medium">S.S.C</div>
-                                    <div class="flex space-x-5">
-                                        <div class="item-header-info">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path d="M12 14l9-5-9-5-9 5 9 5z" />
-                                                <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
-                                            </svg>
-                                            <span>G.S.E.B</span>
-                                        </div>
-                                        <div class="item-header-info">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                            </svg>
-                                            <span>India</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="space-y-1.5 sm:text-right">
-                                    <div class="item-header-info">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                        </svg>
-                                        <span>Jun 2002 – Mar 2003</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        </template>
                 </div><!-- Start Education Block -->
 
                 <div class="p-7 block-section"  x-show="tab === 'portfolio'"><!-- Start Education Block -->
@@ -688,8 +529,6 @@ profiles: [{
                     </div>
 
                     <h2 class="block-title">WooCommerce Plugins</h2>
-
-
 
                     <div class="mb-5 item-section">
                         <div class="company-logo" style="">

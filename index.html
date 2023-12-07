@@ -381,7 +381,7 @@
 <script>
     document.addEventListener('alpine:init', () => {
         Alpine.data('personalData', () => ({
-            tab: 'about',
+            tab: window.location.hash.substring(1) || 'about',
             coreValues: ['Integrity', 'Compassion', 'Simplicity', 'Happiness', 'Gratitude', 'Perseverance'],
             skills: ['PHP', 'WordPress', 'Laravel', 'JavaScript', 'React', 'NodeJS', 'Vue', 'SQL', 'HTML', 'Grunt', 'AlpineJS', 'Tailwind CSS', 'Git', 'Composer', 'npm', 'Workflow Automation'],
             aboutMe: 'I have 14+ years of experience in building software that helps to solve real problems for real people. <br/><br/> I believe in <b>Think Big, Start With Small</b> and follow this in his day-to-day life. <br/><br/> I have built 25+ products and being used by 100,000+ users <br/><br/> I am a full-stack web developer with sound knowledge of various technologies like PHP (WordPress, Laravel), MySQL, NodeJS, ReactJS, etc.. <br/><br/> Apart from all this, I am a responsible son, caring husband, and father of two loving daughters. <br/><br/> When I\'m not glued on a computer screen, I spend time with family, on cricket ground or on badminton court, and trying hard not to be the worst dancer!',
@@ -430,7 +430,7 @@
                     name: 'GravityKit',
                     title: 'Software Engineer',
                     location: 'United States · Remote',
-                    duration: 'Nov 2023 – Present',
+                    duration: 'Oct 2023 – Present',
                     logo: 'gk.jpg',
                     skills: 'PHP, WordPress, Git, GitHub, Grunt, NPM, Composer, GitHib Actions',
                     summary: '<ul class=\'list-disc list-inside\'> <li>Develop Gravity Forms Extenstions.</li> <li>Implement new features in GravityView, GravityMath, GravityCalendar plugins.</li><li>Triage bugs.</li></ul>'
@@ -440,7 +440,7 @@
                     name: 'Awesome Motive Inc.',
                     title: 'Product Developer @OptinMonster',
                     location: 'United States · Remote',
-                    duration: 'Nov 2022 – Oct 2023',
+                    duration: 'Nov 2022 – Sep 2023',
                     logo: 'am.jpg',
                     skills: 'PHP, WordPress, Slim, React, Git, GitHub, Zenhub, Asana, Grunt, NPM, Composer, Buddy, Sentry, GitHib Actions',
                     summary: '<ul class=\'list-disc list-inside\'> <li>Develop OptinMonster SaaS backend.</li> <li>Code Reviews.</li> <li>Participate in team meetings.</li> <li>Triage bugs.</li> <li>Write technical document.</li> <li>Customer Support.</li> </ul>'
